@@ -1,4 +1,6 @@
 # An Unfortunate “Kilnundrum”
+***Multiple vulnerabilities in Blaauw Kilns Remote Kiln Control leading to RCE and subsequent ghosting by the vendor***
+
 This is the story of a couple of vulnerabilities I discovered in a kiln during a network vulnerability assessment, and how I have no idea whether or not they are currently patched. I went back and forth as to whether or not to release this information for a while, but since I made multiple good-faith efforts to work with the vendor to resolve the issues, I have decided to release the information so that people will at least know that their products may be vulnerable. The vulnerabilities discovered can lead to remote code execution, so it is important to know whether or not you may be affected.
 
 ## SQL Injection to grab MD5 password Hashes

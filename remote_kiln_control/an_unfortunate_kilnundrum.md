@@ -4,7 +4,7 @@ This is the story of a couple of vulnerabilities I discovered in a kiln during a
 ## SQL Injection to grab MD5 password Hashes
 During a network vulnerability assessment for a client, I was looking at the results of some Nessus scans. One instance of SQLi immediately seemed like a false positive, but regardless I always double check just in case it wasn’t. After checking out the URL reported to have an SQLi, it was in fact a false positive, but the web application was a PHP app so I decided to poke around anyways. There was a login screen, and as it turned out, the username in the login screen itself was vulnerable to SQL injection.
 
-![SQLi](an_unfortunate_kilnundrum.md)
+![SQLi](sqli_screenshot.png)
 *Fig 1: A SQL injection triggered via the username field in the login page.*
 I was able to dump the contents of the database using sqlmap and was able to identify three databases:
 

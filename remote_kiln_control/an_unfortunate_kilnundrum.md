@@ -6,7 +6,8 @@ During a network vulnerability assessment for a client, I was looking at the res
 
 ![SQLi](sqli_screenshot.png)
 *Fig 1: A SQL injection triggered via the username field in the login page.*
-I was able to dump the contents of the database using sqlmap and was able to identify three databases:
+
+Using this SQLi I was able to dump the contents of the database using sqlmap and was able to identify three databases:
 
 -	Information_schema
 -	rkc

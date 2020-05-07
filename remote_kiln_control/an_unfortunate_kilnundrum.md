@@ -27,6 +27,7 @@ The `debug.php` file already allows a user to execute arbitrary php code in a we
 
 ## Other vulnerabilities
 All in all, I distilled my findings into 9 distinct vulnerabilities and generated a report to send to the vendor. In total the findings included:
+
 1.	Information Exposure through Discrepancy
 2.	Information Exposure through Source Code
 3.	Information Exposure through Directory Listing
@@ -38,15 +39,16 @@ All in all, I distilled my findings into 9 distinct vulnerabilities and generate
 9.	Leftover Debug Code
 
 
-I was able to identify a few version numbers attributed to the instance of the Remote Kiln Control and they are as follows.
+I was able to identify a few version numbers attributed to the instance of the Remote Kiln Control. They are as follows.
+
 -	Remote Kiln Control
 -	RKC - version: v3.00r4
 -	SVN revision: 278
 
 ## Vendor Contact
-I originally contacted the Vendor on November 6, 2019 with a report outlining all of the above vulnerabilities. They responded timely, and told me they had already received my report, CC’ing an unrelated client. I informed them that was not in fact my client and that my report may contain different vulnerabilities than had already been reported. (There were other vulnerabilities related to dependencies that were being addressed separately). They asked who my client was, and I responded I couldn’t give out my client information but I would be happy to give their information to my client. After that email I was ghosted.
+I originally contacted the Vendor on November 6, 2019, with a report outlining all of the above vulnerabilities. They responded timely, and told me they had already received my report, CC’ing an unrelated institution who had also submitted a vulnerability report to them. I informed Blauuw Kilns that was not in fact my client and that my report may contain different vulnerabilities than had already been reported. (There were other vulnerabilities related to dependencies that were being addressed separately). They asked who my client was, and I responded I couldn’t give out my client information but I would be happy to give their information to my client. After that email I was ghosted.
 
-I sent a follow up email on December 11, 2019 indicating I had reported the vulnerabilities to MITRE and planned a release date of January 24, 2020. I also tried to communicate through them via my client, but to no avail. Now at least 3 months after the date I intended to release the CVEs I think there has been adequate time to fix the bug so I am publishing the details. I am hoping that they fixed the bug but just decided to not talk to me.
+I sent a follow up email on December 11, 2019, indicating I had reported the vulnerabilities to MITRE and planned a release date of January 24, 2020. I also tried to communicate through them via my client, but to no avail. Now at least 3 months after the date I intended to release the CVEs I think there has been adequate time to fix the bug so I am publishing the details. I am hoping that they fixed the bug but just decided to not talk to me.
 
 ## CVE List
 **Information Exposure Through Discrepancy (CVE-2019-18865)**
@@ -60,7 +62,7 @@ Browsable directories in Blaauw Remote Kiln Control through v3.00r4 allow an att
  This affects `/ajax/`, `/common/`, `/engine/`, `/flash/`, `/images/`, `/Images/`, `/jscripts/`, `/lang/`, `/layout/`, `/programs/`, and `/sms/`.
 
 **Information Exposure (CVE-2019-18864)**
-Kiln Control through v3.00r4 allow an unauthenticated attacker to gain sensitive information about the host machine via `/server-info` and `/server-status` endpoints.
+Kiln Control through v3.00r4 allows an unauthenticated attacker to gain sensitive information about the host machine via `/server-info` and `/server-status` endpoints.
 
 **SQL Injection (CVE-2019-18866)**
 Unauthenticated SQL injection via the username in the login mechanism in Blaauw Remote Kiln Control through v3.00r4 allows a user to extract arbitrary data from the rkc database.
@@ -75,4 +77,4 @@ A path traversal via the `iniFile` parameter in `excel.php` in Blaauw Remote Kil
 A path traversal in `debug.php` accessed via `default.php` in Blaauw Remote Kiln Control through v3.00r4 allows an authenticated attacker to upload arbitrary files, leading to arbitrary remote code execution.
 
 **Leftover Debug Code (CVE-2019-18869)**
-Leftover Debug Code in Blaauw Remote Kiln Control through v3.00r4 allows a user to execute arbitrary php code via `/default.php?idx=17`
+Leftover Debug Code in Blaauw Remote Kiln Control through v3.00r4 allows a user to execute arbitrary PHP code via `/default.php?idx=17`

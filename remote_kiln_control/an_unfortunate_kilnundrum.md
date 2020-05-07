@@ -52,29 +52,38 @@ I sent a follow up email on December 11, 2019, indicating I had reported the vul
 
 ## CVE List
 **Information Exposure Through Discrepancy (CVE-2019-18865)**
+
 Information disclosure via error message discrepancies in authentication functions in Blaauw Remote Kiln Control through v3.00r4 allows an unauthenticated attacker to enumerate valid usernames.
 
 **Information Exposure through source code (CVE-2019-18868)**
+
 Blaauw Remote Kiln Control through v3.00r4 allows an unauthenticated attacker to access MySQL credentials in cleartext in `/engine/db.inc`, `/lang/nl.bak`, or `/lang/en.bak`
 
 **Information Exposure Through Directory Listing (CVE-2019-18867)**
+
 Browsable directories in Blaauw Remote Kiln Control through v3.00r4 allow an attacker to enumerate sensitive filenames and locations, including source code.
  This affects `/ajax/`, `/common/`, `/engine/`, `/flash/`, `/images/`, `/Images/`, `/jscripts/`, `/lang/`, `/layout/`, `/programs/`, and `/sms/`.
 
 **Information Exposure (CVE-2019-18864)**
+
 Kiln Control through v3.00r4 allows an unauthenticated attacker to gain sensitive information about the host machine via `/server-info` and `/server-status` endpoints.
 
 **SQL Injection (CVE-2019-18866)**
+
 Unauthenticated SQL injection via the username in the login mechanism in Blaauw Remote Kiln Control through v3.00r4 allows a user to extract arbitrary data from the rkc database.
 
 **Weak Password Requirements (CVE-2019-18872)**
+
 Weak password requirements in Blaauw Remote Kiln Control through v3.00r4 allow a user to set short or guessable passwords (e.g., 1 or 1234).
 
 **Arbitrary File Download (CVE-2019-18870**
+
 A path traversal via the `iniFile` parameter in `excel.php` in Blaauw Remote Kiln Control through v3.00r4 allows an authenticated attacker to download arbitrary files from the host machine.
 
 **Arbitrary File Upload (CVE-2019-18871)**
+
 A path traversal in `debug.php` accessed via `default.php` in Blaauw Remote Kiln Control through v3.00r4 allows an authenticated attacker to upload arbitrary files, leading to arbitrary remote code execution.
 
 **Leftover Debug Code (CVE-2019-18869)**
+
 Leftover Debug Code in Blaauw Remote Kiln Control through v3.00r4 allows a user to execute arbitrary PHP code via `/default.php?idx=17`

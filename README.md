@@ -10,3 +10,6 @@ This is a list of CVEs reported by Lodestone Security.
 
 ## Blauuw Kilns: Remote Kiln Control
 * [9 CVES including SQLi and RCE](remote_kiln_control/an_unfortunate_kilnundrum.md)
+
+## SysAid Reflected XSS
+* [CVE-2020-13168 (Reflected XSS)](CVE-2020-13168/README.md)
